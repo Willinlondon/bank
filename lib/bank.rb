@@ -7,9 +7,9 @@ class Bank
 
   def deposit(amount)
     if amount.is_a? Integer
-      @balance += amount
+        @balance += amount
     else
-      raise "Please enter a valid numerical number"
+      raise "Please enter a valid, positive numerical number greater than 0!"
     end
   end
 end
