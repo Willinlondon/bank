@@ -9,7 +9,7 @@ class Bank
     if valid?(amount)
         @balance += amount
     else
-      raise "Please enter a valid, positive numerical number greater than 0!"
+      invalid_error_message
     end
   end
 
@@ -21,6 +21,10 @@ class Bank
     else
       true
     end
+  end
+
+  def invalid_error_message
+    raise "Please enter a valid, positive numerical number greater than 0!"
   end
 
 end
