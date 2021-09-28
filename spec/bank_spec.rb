@@ -41,4 +41,9 @@ describe Bank do
     expect{subject.withdraw(0)}.to raise_error("Please enter a valid, positive numerical number greater than 0!")
   end
 
+  it 'checks that a user is unable to withdraw funds they do not have' do
+    subject.deposit(10)
+    expect{subject.withdraw(50)}.to raise_error("Insufficient funds to make this withdrawal")
+  end
+
 end

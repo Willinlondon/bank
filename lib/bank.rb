@@ -15,7 +15,11 @@ class Bank
 
   def withdraw(amount)
     if valid?(amount)
+      if @balance >= amount
         @balance -= amount
+      else
+        raise "Insufficient funds to make this withdrawal"
+      end
     else
       invalid_error_message
     end
