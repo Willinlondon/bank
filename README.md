@@ -1,5 +1,9 @@
 Here is William's solving of the Bank Challenge during Code Quality week 10 of Makers. Below I have copy/pasted the original instructions and specifications for reference, and up top here will post my thinkings and solving as I go along.
 
+Here is my thinking and process:
+1) Keep everything in a single "Bank" class.
+2) Four initial methods for the end user to use, which would be Deposit, Withdraw, Balance and Statement. Although I am not against potentially having to add more methods for the sake of refactoring later.
+3) I will start with the Deposit and Balance methods and use TDD to get these methods working how I want them to be.
 
 
 # Bank tech test
