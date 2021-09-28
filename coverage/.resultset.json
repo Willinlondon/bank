@@ -6,7 +6,6 @@
           1,
           null,
           1,
-          null,
           1,
           1,
           null,
@@ -57,19 +56,31 @@
       "/Users/william/Desktop/Projects/bank/lib/bank.rb": {
         "lines": [
           1,
+          null,
+          1,
           1,
           null,
           1,
+          10,
           10,
           null,
           null,
           1,
           6,
+          3,
           null,
           null,
           1,
           5,
           2,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -90,6 +101,6 @@
         ]
       }
     },
-    "timestamp": 1632842383
+    "timestamp": 1632847406
   }
 }
