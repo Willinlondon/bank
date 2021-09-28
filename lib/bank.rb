@@ -10,7 +10,9 @@ class Bank
   end
 
   def withdraw(amount)
-      (@balance >= amount ? @balance -= amount : insufficient_funds) if valid?(amount)
+    if valid?(amount)
+      @balance >= amount ? @balance -= amount : insufficient_funds
+    end
   end
 
   private
@@ -20,10 +22,10 @@ class Bank
   end
 
   def invalid_amount
-    raise "Please enter a valid, positive numerical number greater than 0!"
+    raise 'Please enter a valid, positive numerical number greater than 0!'
   end
 
   def insufficient_funds
-    raise "Insufficient funds to make this withdrawal"
+    raise 'Insufficient funds to make this withdrawal'
   end
 end
