@@ -5,6 +5,8 @@ Here is my thinking and process:
 2) Four initial methods for the end user to use, which would be Deposit, Withdraw, Balance and Statement. Although I am not against potentially having to add more methods for the sake of refactoring later.
 3) I will start with the Deposit and Balance methods and use TDD to get these methods working how I want them to be.
 4) I also ironed out a few of the possible edge cases here, such as entering a non integer, entering 0, and a negative amount.
+5) Onto the withdrawal method, very similar to the deposit one, minus an additional edge case of not being able to withdraw when you don't have enough cash.
+6) Onto the final and hardest method, which is the statement. My thinking here is to create an array of hashes, and save every transaction as a hash, and then have the Statement method simply display them in a tidy format.
 
 
 # Bank tech test
