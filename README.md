@@ -4,6 +4,7 @@ Here is my thinking and process:
 1) Keep everything in a single "Bank" class.
 2) Four initial methods for the end user to use, which would be Deposit, Withdraw, Balance and Statement. Although I am not against potentially having to add more methods for the sake of refactoring later.
 3) I will start with the Deposit and Balance methods and use TDD to get these methods working how I want them to be.
+4) I also ironed out a few of the possible edge cases here, such as entering a non integer, entering 0, and a negative amount.
 
 
 # Bank tech test
