@@ -1,0 +1,29 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/william/Desktop/Projects/bank/spec/bank_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/william/Desktop/Projects/bank/lib/bank.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1632837213
+  }
+}
