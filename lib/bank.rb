@@ -13,6 +13,14 @@ class Bank
     end
   end
 
+  def withdraw(amount)
+    if valid?(amount)
+        @balance -= amount
+    else
+      invalid_error_message
+    end
+  end
+
   private
 
   def valid?(amount)

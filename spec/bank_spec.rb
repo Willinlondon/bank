@@ -23,4 +23,22 @@ describe Bank do
     expect{subject.deposit(0)}.to raise_error("Please enter a valid, positive numerical number greater than 0!")
   end
   
+  it 'checks a client is able to withdraw and balance updates' do
+    subject.deposit(50)
+    subject.withdraw(10)
+    expect(subject.balance).to eq 40
+  end
+
+  it 'checks that a withdrawal can only be a inputted as a number' do
+    expect{subject.withdraw('blah')}.to raise_error("Please enter a valid, positive numerical number greater than 0!")
+  end
+
+  it 'checks that a negative amount cannot be withdrawn' do
+    expect{subject.withdraw(-10)}.to raise_error("Please enter a valid, positive numerical number greater than 0!")
+  end
+
+  it 'checks that a negative amount cannot be withdrawn' do
+    expect{subject.withdraw(0)}.to raise_error("Please enter a valid, positive numerical number greater than 0!")
+  end
+
 end
