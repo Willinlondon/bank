@@ -6,37 +6,24 @@ class Bank
   end
 
   def deposit(amount)
-    if valid?(amount)
-        @balance += amount
-    else
-      invalid_error_message
-    end
+    @balance += amount if valid?(amount)
   end
 
   def withdraw(amount)
-    if valid?(amount)
-      if @balance >= amount
-        @balance -= amount
-      else
-        raise "Insufficient funds to make this withdrawal"
-      end
-    else
-      invalid_error_message
-    end
+      (@balance >= amount ? @balance -= amount : insufficient_funds) if valid?(amount)
   end
 
   private
 
   def valid?(amount)
-    if !amount.is_a?(Integer) || amount <= 0
-      false
-    else
-      true
-    end
+    !amount.is_a?(Integer) || amount <= 0 ? invalid_amount : true
   end
 
-  def invalid_error_message
+  def invalid_amount
     raise "Please enter a valid, positive numerical number greater than 0!"
   end
 
+  def insufficient_funds
+    raise "Insufficient funds to make this withdrawal"
+  end
 end
