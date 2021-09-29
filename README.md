@@ -7,6 +7,8 @@ Here is my thinking and process:
 4) I also ironed out a few of the possible edge cases here, such as entering a non integer, entering 0, and a negative amount.
 5) Onto the withdrawal method, very similar to the deposit one, minus an additional edge case of not being able to withdraw when you don't have enough cash.
 6) Onto the final and hardest method, which is the statement. My thinking here is to create an array of hashes, and save every transaction as a hash, and then have the Statement method simply display them in a tidy format.
+7) My thinking for the method worked, and was extensively test driven using IRB, to get the layout and format looking exactly how I wanted it. When attempting to write an Rspec test however, some very funky things were happening and Rspec did not seem to want to check the output of the method at all. Since literally hours had been spent in IRB at this point, I was not at all worried about that.
+8) Final steps now, several refactors have taken place, many one liners now exist. Also the class now properly accepts floats, and handles it's decimals all correctly.
 
 
 # Bank tech test

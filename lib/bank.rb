@@ -5,7 +5,7 @@ class Bank
 
   def initialize
     @balance = 0
-    @history =[]
+    @history = []
   end
 
   def deposit(amount)
@@ -34,7 +34,7 @@ class Bank
   end
 
   def invalid_amount
-    raise 'Please enter a valid, positive numerical number greater than 0!'
+    raise 'Please enter a valid, positive number greater than 0!'
   end
 
   def insufficient_funds
