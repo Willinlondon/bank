@@ -9,14 +9,14 @@ class Bank
   end
 
   def deposit(amount)
-    @balance += amount if valid?(amount)
-    @history << { "date" => Date.today, "credit" => amount, "balance" => @balance }
+    @balance += amount.round(2) if valid?(amount)
+    @history << { "date" => Date.today, "credit" => '%.2f' % amount, "balance" => '%.2f' % @balance }
   end
 
   def withdraw(amount)
     if valid?(amount)
-      @balance >= amount ? @balance -= amount : insufficient_funds
-      @history << { "date" => Date.today, "debit" => amount, "balance" => @balance}
+      @balance >= amount ? @balance -= amount.round(2) : insufficient_funds
+      @history << { "date" => Date.today, "debit" => '%.2f' % amount, "balance" => '%.2f' % @balance }
     end
   end
 
@@ -30,7 +30,7 @@ class Bank
   private
 
   def valid?(amount)
-    !amount.is_a?(Integer) || amount <= 0 ? invalid_amount : true
+    !amount.is_a?(String) && amount >= 0.01 ? true : invalid_amount
   end
 
   def invalid_amount
