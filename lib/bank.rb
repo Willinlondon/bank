@@ -22,8 +22,8 @@ class Bank
 
   def transactions
     puts "date || credit || debit || balance"
-    @history.reverse.each do |transaction|
-      puts "#{transaction["date"]}||#{transaction["credit"]}||#{transaction["debit"]}||#{transaction["balance"]}"
+    @history.reverse.each do |op|
+      puts "#{op["date"]} || #{op["credit"]} || #{op["debit"]} || #{op["balance"]}"
     end
   end
 
